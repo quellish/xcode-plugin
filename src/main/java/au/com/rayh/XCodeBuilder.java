@@ -144,7 +144,7 @@ public class XCodeBuilder extends Builder {
 		}
 		if (!StringUtils.isEmpty(configurationBuildDir)) {
 		try {
-		    configurationBuildDirValue = TokenMacro.expandAll(build, listener, symRoot).trim();
+		    configurationBuildDirValue = TokenMacro.expandAll(build, listener, configurationBuildDir).trim();
 		  } catch (MacroEvaluationException e) {
 		    listener.error(Messages.XCodeBuilder_configurationBuildDirMacroError(e.getMessage()));
 		    return false;
